@@ -1,0 +1,61 @@
+* {
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  padding-top: 150px;
+  font-size: 70px;
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+#bar {
+  height: 50px;
+  width: 350px;
+  background-color: gray;
+  border-radius: 100px 100px 0px 0px;
+  border: 0px;
+  font-size: 30px;
+}
+
+#bar:hover {
+  border: solid white 1px;
+}
+
+#btn {
+  height: 50px;
+  width: 350px;
+  background-color: rgb(58, 58, 58);
+  border: 0px;
+  font-size: 30px;
+  border-radius: 0px 0px 100px 100px;
+}
+
+#btn:hover {
+  border: solid white 1px;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+  }
+}
