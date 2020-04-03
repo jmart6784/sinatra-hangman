@@ -4,7 +4,7 @@
   color: white;
 }
 
-h1 {
+#title {
   padding-top: 150px;
   font-size: 70px;
 }
@@ -20,6 +20,8 @@ body {
   border-radius: 100px 100px 0px 0px;
   border: 0px;
   font-size: 30px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #bar:hover {
@@ -33,9 +35,12 @@ body {
   border: 0px;
   font-size: 30px;
   border-radius: 0px 0px 100px 100px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #btn:hover {
+  font-size: 40px;
   border: solid white 1px;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;

@@ -8,14 +8,17 @@
     <title>Hangman</title>
   </head>
   <body>
-    <h1>Hangman</h1>
+    <h1 id="title">Hangman</h1>
+      <div id="wordblanks">
+        <p> <%= Hangman.new.start %></p>
+      </div>
       <div id="form">
-        <form id="cinput">
-          <input id="bar" type="text", name="guess"><br>
+        <form id="guessform">
+          <input id="bar" type="text", name="guess" maxlength="1"><br>
           <input id="btn" type="submit" value="Guess!">
         </form>
       </div>
-      <p><%= input.to_s %></p>
+
     <script src="/app.js"></script>
   </body>
 </html>
