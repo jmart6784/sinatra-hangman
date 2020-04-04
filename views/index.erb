@@ -8,6 +8,7 @@
     <title>Hangman</title>
   </head>
   <body>
+  <a href="/">HOME</a>
     <h1 id="title">Hangman</h1>
       <div id="wordblanks">
         <p> <%= Hangman.new.start %></p>
@@ -18,6 +19,7 @@
           <input id="btn" type="submit" value="Guess!">
         </form>
       </div>
+      <p id="used"> <%= "Letters Used: #{@guesses.join(" ")}" %></p>
 
     <script src="/app.js"></script>
   </body>

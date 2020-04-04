@@ -4,7 +4,6 @@ btn.addEventListener('mouseenter', function() {
   let style = document.createElement('style');
 style.innerHTML =
   '#title {' +
-  'font-size: 75px;' +
   'transition: 1s;' +
   '-webkit-animation: glow 1s ease-in-out infinite alternate;' +
   '-moz-animation: glow 1s ease-in-out infinite alternate;' +
@@ -20,7 +19,6 @@ btn.addEventListener('mouseleave', function () {
   let style2 = document.createElement('style');
   style2.innerHTML =
     '#title {' +
-    'font-size: 70px;' +
     'transition: 1s;' +
     '-webkit-animation: glow 0s ease-in-out infinite alternate;' +
     '-moz-animation: glow 0s ease-in-out infinite alternate;' +
