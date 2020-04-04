@@ -14,7 +14,8 @@ class Hangman
     @attempts = @att.to_i
     @letters_used = ""
     @display = "_" * @random_word.length
-    puts @random_word
+    
+    @random_word
   end
 end
 

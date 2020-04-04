@@ -30,9 +30,3 @@ get "/" do
   store_data("data.txt", @input)
   erb :index, :locals => { :input => @input }
 end
-
-post "/" do
-  @input = params["guess"]
-  store_data("data.txt", @input)
-  redirect "/"
-end 
