@@ -8,18 +8,67 @@
     <title>Hangman</title>
   </head>
   <body>
-  <a href="/">HOME</a>
     <h1 id="title">Hangman</h1>
-      <div id="wordblanks">
-        <p> <%= Hangman.new.start %></p>
+    <div id="container">
+    
+      <div class="sides">
+        <p id="gtitle">
+          Guess the word:
+          <br>
+          <%= guess %>
+        </p>
+
+        <p id="guesscount">
+          Attempts left: <%= 6 - stickman %>
+        </p>
       </div>
-      <div id="form">
-        <form id="guessform">
-          <input id="bar" type="text", name="guess" maxlength="1"><br>
-          <input id="btn" type="submit" value="Guess!">
-        </form>
+
+      <div id="middle">
+        <% if stickman == 0 %>
+          <img src='images/0.png' class="img">
+        <% elsif stickman == 1 %>
+          <img src='images/1.png' class="img">
+        <% elsif stickman == 2 %>
+          <img src='images/2.png' class="img">
+        <% elsif stickman == 3 %>
+          <img src='images/3.png' class="img">
+        <% elsif stickman == 4 %>
+          <img src='images/4.png' class="img">
+        <% elsif stickman == 5 %>
+          <img src='images/5.png' class="img">
+        <% elsif stickman == 6 %>
+          <img src='images/6.png' class="img">
+        <% end %>
+        
+        <% unless game_over %>
+          <form>
+            <input id="bar" type="text" name="letter" maxlength="1"><br>
+            <input id="btn" type="submit" value="Guess!">
+          </form>
+        <% end %><br>
+        <p id=result>
+          <% if game_over %>
+          <%=  game_over %>
+          <br>
+          <%= "Answer: #{answer}" %>
+          <form action='/'><input id="replay" type=submit value='Replay'/></form>
+          <% end %>
+        </p>
       </div>
-      <p id="used"><%= "Letters Used: #{@guesses.join(" ")}" %></p>
+
+      <div class="sides">
+        <p id="wrong">
+          Wrong letters:
+          <br>
+          <%= missed %>
+          <br>
+        </p>
+        <% if message %>
+          <p>Your guess is <%= message %>!</p>
+        <% end %>
+      </div>
+
+    </div>
 
     <script src="/app.js"></script>
   </body>

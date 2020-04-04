@@ -5,8 +5,8 @@
 }
 
 #title {
-  padding-top: 150px;
-  font-size: 70px;
+  padding-top: 0px;
+  font-size: 60px;
 }
 
 body {
@@ -65,7 +65,43 @@ body {
   }
 }
 
-#used {
+.img {
+  height: 350px;
+  width: 300px;
+}
+
+#guesscount {
+  font-size: 20px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sides {
+  margin: 0 auto;
+  border: solid gray 1px;
+  background-color: gray;
+  border-radius: 100px;
+  height: 35%;
+  width: 80%;
   font-size: 25px;
-  padding-top: 40px;
+}
+
+#result {
+  font-size: 20px;
+}
+
+#replay {
+  color: white;
+  background-color: rgb(58, 58, 58);
+  border-radius: 20px;
+  border: 0px;
+  height: 50px;
+  width: 130px;
+}
+
+#replay:hover {
+  border: solid white 1px;
 }
