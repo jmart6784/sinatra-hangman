@@ -1,6 +1,5 @@
 require "sinatra"
 require "sinatra/reloader" if development?
-require 'yaml'
 
 class Ai
   attr_reader :word

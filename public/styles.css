@@ -48,7 +48,6 @@ body {
 }
 
 .glow {
-  font-size: 80px;
   color: #fff;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -58,10 +57,10 @@ body {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px green, 0 0 50px green, 0 0 60px green, 0 0 70px green;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px rgb(255, 255, 255), 0 0 50px rgb(255, 255, 255), 0 0 60px rgb(255, 255, 255), 0 0 70px rgb(252, 252, 252);
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+    text-shadow: 0 0 20px #fff, 0 0 30px gray, 0 0 40px gray, 0 0 50px gray, 0 0 60px gray, 0 0 70px gray, 0 0 80px gray;
   }
 }
 
@@ -94,12 +93,13 @@ body {
 }
 
 #replay {
+  font-size: 40px;
   color: white;
   background-color: rgb(58, 58, 58);
   border-radius: 20px;
   border: 0px;
-  height: 50px;
-  width: 130px;
+  height: 100px;
+  width: 200px;
 }
 
 #replay:hover {

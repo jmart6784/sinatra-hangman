@@ -8,7 +8,11 @@
     <title>Hangman</title>
   </head>
   <body>
-    <h1 id="title">Hangman</h1>
+    <% if stickman == 6 %>
+      <h1 style="color:red;" id="title" class="glow">Hangman</h1>
+    <% else %>
+      <h1 id="title">Hangman</h1>
+    <% end %>
     <div id="container">
     
       <div class="sides">
@@ -51,7 +55,7 @@
           <%=  game_over %>
           <br>
           <%= "Answer: #{answer}" %>
-          <form action='/'><input id="replay" type=submit value='Replay'/></form>
+          <form action='/'><input id="replay" class="glow" type=submit value='Replay'/></form>
           <% end %>
         </p>
       </div>
