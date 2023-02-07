@@ -88,22 +88,22 @@ class Game
   end
 end
 
-@@game = Game.new
+game = Game.new
 
 get "/" do
-  @progress = @@game.progress
+  @progress = game.progress
   answer = @progress['answer']
   letter = params['letter']
-  message = @@game.check_guess(letter) if letter != nil
+  message = game.check_guess(letter) if letter != nil
   round = @progress['round']
   stickman = @progress['missed'].size
   @progress['round'] += 1
   guess = @progress['guess'].join(' ')
   missed = @progress['missed'].join(', ')
-  game_over = @@game.game_over?(answer, guess, stickman)
+  game_over = game.game_over?(answer, guess, stickman)
   if game_over
-    @@game = Game.new
-    @progress = @@game.progress
+    game = Game.new
+    @progress = game.progress
   end
   erb :index, :locals => { :letter => letter, :missed => missed, :message => message, :round => round, :stickman => stickman, :game_over => game_over, :answer => answer, :guess => guess }
 end
